@@ -3,6 +3,7 @@ import 'package:flutter_food_delivery_ui/widgets/recent_orders.dart';
 import 'package:flutter_food_delivery_ui/widgets/restaurant_view.dart';
 
 import '../data/data.dart';
+import 'cart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -15,11 +16,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Food Delivery'),
+        brightness: Brightness.dark,
         leading: IconButton(
             icon: Icon(Icons.account_circle), iconSize: 30, onPressed: () {}),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => CartScreen()));
+              },
               child: Text(
                 'Cart (${currentUser.cart.length})',
                 style: TextStyle(fontSize: 18, color: Colors.white),

@@ -26,7 +26,6 @@ class RecentOrders extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 16),
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.all(12),
